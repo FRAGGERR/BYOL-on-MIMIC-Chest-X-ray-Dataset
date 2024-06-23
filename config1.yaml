@@ -1,0 +1,23 @@
+model:
+pretrained: True
+mode: 'pre'
+
+dataset: 'mimic'
+task: 'chex_competiton_tasks'
+data_pct: 30
+resize_size: 224
+pre_bs: 64
+data_workers: 16
+train_bs: 64
+val_bs: 16
+
+lr: 0.0003
+schedule_factor: 0.1            
+schedule_patience: 5           
+wd: 1e-4
+total_epochs: 300
+patience: 10
+
+resume_path:
+ckpt_path: 
+log_step: 50
